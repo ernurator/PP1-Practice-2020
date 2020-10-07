@@ -3,16 +3,14 @@
 using namespace std;
 
 int main(){
-    int n, maxi = INT32_MIN, pos = 0;
+    int n, maxi;
     cin >> n;
     for(int i = 0; i < n; ++i){
         int x;
         cin >> x;
-        if(x > maxi){
-            maxi = x;
-            pos = i + 1;
-        }
+        if(x > maxi || i == 0) maxi = x;
     }
-    cout << pos;
+    cout << maxi;
+    
     return 0;
 }
