@@ -26,8 +26,7 @@ int main() {
     cin >> n;
     if(f(s, n) == true){
         cout << "Valid";
-    }
-    else {
+    } else {
         cout << "Not valid";
     }
     return 0;
