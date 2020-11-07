@@ -2,21 +2,23 @@
 
 using namespace std;
 
-bool f(int n, int a[], int i, int x){
+int n, x;
+
+bool f(int a[], int i){
     if(i == n) return false;
     if(a[i] == x) return true;
-    return f(n, a, i + 1, x);
+    return f(a, i + 1);
 }
 
 int main() {
-    int n;
+    // int n;
     cin >> n;
     int a[n];
     for(int i = 0; i < n; ++i){
         cin >> a[i];
     }
-    int x; cin >> x;
-    if(f(n, a, 0, x))
+    cin >> x;
+    if(f(a, 0))
         cout << "Yes";
     else
         cout << "No";
