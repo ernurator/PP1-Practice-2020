@@ -5,7 +5,8 @@
 using namespace std;
 
 bool comp(string x1, string x2){
-    return x1.length() < x2.length();
+    if(x1.length() != x2.length()) return x1.length() < x2.length();
+    return x1 < x2;
 }
 
 int main(){
